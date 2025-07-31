@@ -124,7 +124,7 @@ export default function Home() {
               <div className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold">💩</span>
               </div>
-              <span className="font-fredoka text-xl gradient-text">LaPooPoo</span>
+              <span className="font-orbitron text-xl gradient-text">LaPooPoo</span>
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#home" className="hover:text-yellow-400 transition-colors">Home</a>
@@ -144,16 +144,16 @@ export default function Home() {
         <FloatingParticles />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             {/* Left Content */}
-            <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
-              <h1 className="font-fredoka text-5xl md:text-7xl lg:text-8xl gradient-text animate-pulse-fast">
+            <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
+              <h1 className="font-orbitron text-5xl md:text-6xl lg:text-7xl gradient-text font-black">
                 LaPooPoo
               </h1>
               <p className="text-2xl md:text-3xl font-bold text-yellow-400">
                 The Meme Coin That Makes You Laugh!
               </p>
-              <p className="text-lg md:text-xl text-gray-300 max-w-2xl">
+              <p className="text-lg text-gray-300 max-w-xl">
                 Join the most hilarious crypto adventure! LaPooPoo is here to bring fun, community, and explosive gains to the meme coin space. Don't miss out on the next big thing! 🚀
               </p>
               
@@ -184,7 +184,7 @@ export default function Home() {
             {/* Right Content - Mascot */}
             <div className="lg:w-1/2">
               <div className="relative animate-float">
-                <div className="w-80 h-80 md:w-96 md:h-96 mx-auto relative">
+                <div className="w-96 h-96 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] mx-auto relative">
                   <img 
                     src={laPooPooImage} 
                     alt="LaPooPoo Mascot - Brown bunny with star eyes and big smile surrounded by poop emojis" 
@@ -198,7 +198,7 @@ export default function Home() {
       </section>
 
       {/* Token Stats Section */}
-      <section className="py-20 bg-black relative">
+      <section className="py-12 bg-black relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {Object.entries(tokenStats).map(([key, value]) => (
@@ -212,9 +212,9 @@ export default function Home() {
       </section>
 
       {/* Tokenomics Section */}
-      <section id="tokenomics" className="py-20 bg-gray-900">
+      <section id="tokenomics" className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-fredoka text-center gradient-text mb-16">Tokenomics</h2>
+          <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-12">Tokenomics</h2>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Tokenomics Chart */}
@@ -262,11 +262,11 @@ export default function Home() {
       </section>
 
       {/* Roadmap Section */}
-      <section id="roadmap" className="py-20 bg-black particle-bg">
+      <section id="roadmap" className="py-16 bg-black particle-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-fredoka text-center gradient-text mb-16">Roadmap to the Moon! 🚀</h2>
+          <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-12">Roadmap to the Moon! 🚀</h2>
           
-          <div className="space-y-12">
+          <div className="space-y-8">
             {roadmapItems.map((item, index) => (
               <div key={index} className="flex items-center space-x-8">
                 <div className={`w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 ${
@@ -298,15 +298,15 @@ export default function Home() {
       </section>
 
       {/* Community Section */}
-      <section id="community" className="py-20 bg-gray-900">
+      <section id="community" className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-fredoka gradient-text mb-8">Join the LaPooPoo Army!</h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-8">Join the LaPooPoo Army!</h2>
+          <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
             Be part of the most hilarious and supportive crypto community! Follow us on all platforms and never miss the latest updates, memes, and opportunities.
           </p>
 
           {/* Social Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {Object.entries(socialStats).map(([platform, stats]) => (
               <Card key={platform} className="bg-black border border-orange-500/20 hover:border-orange-500/40 transition-colors">
                 <CardContent className="p-8">
@@ -347,10 +347,10 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black text-center">
+      <section className="py-16 bg-black text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-6xl font-fredoka gradient-text mb-8">Ready to Join the Fun?</h2>
-          <p className="text-xl text-gray-300 mb-12">
+          <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-6">Ready to Join the Fun?</h2>
+          <p className="text-lg text-gray-300 mb-10">
             Don't miss out on the next big meme coin sensation! Join thousands of LaPooPoo holders and be part of crypto history.
           </p>
           

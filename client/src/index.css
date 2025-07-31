@@ -61,8 +61,8 @@
       radial-gradient(circle at 40% 80%, hsla(51, 100%, 50%, 0.1) 0%, transparent 50%);
   }
   
-  .font-fredoka {
-    font-family: 'Fredoka One', cursive;
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
   }
   
   .animate-float {
