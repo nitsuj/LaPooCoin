@@ -103,12 +103,13 @@ export default function Home() {
         return (
           <div
             key={i}
-            className={`absolute text-xl md:text-2xl animate-float opacity-15`}
+            className={`absolute text-xl md:text-2xl animate-float opacity-40 hover:opacity-60 transition-opacity`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDelay: `${i * 0.3}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
+              animationDuration: `${2 + Math.random() * 3}s`,
+              filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.3))'
             }}
           >
             {randomIcon}
