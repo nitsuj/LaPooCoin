@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Copy, ExternalLink, Twitter, MessageCircle, Users } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import laPooPooImage from "@assets/IMG_1525_1753994050516.jpg";
+import laPooPooImage from "@assets/generated_images/Clean_LaPooPoo_rabbit_mascot_b567ec8a.png";
 
 export default function Home() {
   const { toast } = useToast();
@@ -94,23 +94,27 @@ export default function Home() {
     { label: "👑 Team (Locked)", percentage: "10%" }
   ];
 
-  // Floating particles animation
-  const FloatingParticles = () => (
+  // Floating particles animation - enhanced with more variety
+  const FloatingParticles = ({ density = 12, showStars = false }) => (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      {[...Array(8)].map((_, i) => (
-        <div
-          key={i}
-          className={`absolute text-2xl animate-float opacity-20`}
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${i * 0.5}s`,
-            animationDuration: `${3 + Math.random() * 2}s`
-          }}
-        >
-          💩
-        </div>
-      ))}
+      {[...Array(density)].map((_, i) => {
+        const icons = showStars ? ['💩', '⭐', '✨'] : ['💩'];
+        const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+        return (
+          <div
+            key={i}
+            className={`absolute text-xl md:text-2xl animate-float opacity-15`}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${i * 0.3}s`,
+              animationDuration: `${2 + Math.random() * 3}s`
+            }}
+          >
+            {randomIcon}
+          </div>
+        );
+      })}
     </div>
   );
 
@@ -141,7 +145,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center particle-bg relative pt-16">
-        <FloatingParticles />
+        <FloatingParticles density={15} showStars={true} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -199,7 +203,8 @@ export default function Home() {
 
       {/* Token Stats Section */}
       <section className="py-12 bg-black relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <FloatingParticles density={6} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {Object.entries(tokenStats).map(([key, value]) => (
               <div key={key} className="text-center">
@@ -212,8 +217,9 @@ export default function Home() {
       </section>
 
       {/* Tokenomics Section */}
-      <section id="tokenomics" className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="tokenomics" className="py-16 bg-gray-900 relative">
+        <FloatingParticles density={8} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-12">Tokenomics</h2>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -262,8 +268,9 @@ export default function Home() {
       </section>
 
       {/* Roadmap Section */}
-      <section id="roadmap" className="py-16 bg-black particle-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="roadmap" className="py-16 bg-black particle-bg relative">
+        <FloatingParticles density={10} showStars={true} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-12">Roadmap to the Moon! 🚀</h2>
           
           <div className="space-y-8">
@@ -298,8 +305,9 @@ export default function Home() {
       </section>
 
       {/* Community Section */}
-      <section id="community" className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section id="community" className="py-16 bg-gray-900 relative">
+        <FloatingParticles density={7} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-8">Join the LaPooPoo Army!</h2>
           <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
             Be part of the most hilarious and supportive crypto community! Follow us on all platforms and never miss the latest updates, memes, and opportunities.
@@ -347,8 +355,9 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-black text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-black text-center relative">
+        <FloatingParticles density={8} showStars={true} />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-6">Ready to Join the Fun?</h2>
           <p className="text-lg text-gray-300 mb-10">
             Don't miss out on the next big meme coin sensation! Join thousands of LaPooPoo holders and be part of crypto history.
