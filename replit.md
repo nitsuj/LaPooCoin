@@ -4,6 +4,8 @@
 
 This is a full-stack web application for LaPooPoo Token, a humorous meme cryptocurrency project. The application features a modern, responsive landing page showcasing the token's branding, statistics, and community engagement features. Built with React on the frontend and Express.js on the backend, it provides a professional yet playful presentation for the meme coin.
 
+The site features a clean rabbit mascot, floating particle animations (poop emojis and stars), and uses the Orbitron font for a professional crypto aesthetic while maintaining meme coin appeal.
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
