@@ -15,6 +15,12 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
+    rollupOptions: {
+      external: [],
+    }
   },
   base: "/",
+  define: {
+    'process.env.NODE_ENV': '"production"'
+  }
 });
