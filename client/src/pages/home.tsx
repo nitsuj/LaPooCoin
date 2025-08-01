@@ -94,25 +94,38 @@ export default function Home() {
     { label: "👑 Team (Locked)", percentage: "10%" }
   ];
 
-  // Floating particles animation - enhanced with more variety
-  const FloatingParticles = ({ density = 12, showStars = false }) => (
+  // Floating particles animation - matching original image elements
+  const FloatingParticles = ({ density = 12, showRadials = false }) => (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {[...Array(density)].map((_, i) => {
-        const icons = showStars ? ['💩', '⭐', '✨'] : ['💩'];
-        const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+        // Elements from the original image: poop emojis, plus signs, and radiating lines
+        const elements = showRadials 
+          ? ['💩', '+', '✦', '—', '|', '\\', '/'] 
+          : ['💩', '+', '✦'];
+        const randomElement = elements[Math.floor(Math.random() * elements.length)];
+        
+        // Different styling for different elements
+        const isLine = ['—', '|', '\\', '/'].includes(randomElement);
+        const isPlus = randomElement === '+' || randomElement === '✦';
+        
         return (
           <div
             key={i}
-            className={`absolute text-xl md:text-2xl animate-float opacity-40 hover:opacity-60 transition-opacity`}
+            className={`absolute animate-float opacity-40 hover:opacity-60 transition-opacity ${
+              isLine ? 'text-amber-600 text-sm font-bold' :
+              isPlus ? 'text-amber-500 text-lg font-bold' :
+              'text-xl md:text-2xl'
+            }`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDelay: `${i * 0.3}s`,
               animationDuration: `${2 + Math.random() * 3}s`,
-              filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.3))'
+              filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.3))',
+              transform: isLine ? `rotate(${Math.random() * 360}deg)` : 'none'
             }}
           >
-            {randomIcon}
+            {randomElement}
           </div>
         );
       })}
@@ -146,7 +159,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center particle-bg relative pt-16">
-        <FloatingParticles density={15} showStars={true} />
+        <FloatingParticles density={15} showRadials={true} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -273,7 +286,7 @@ export default function Home() {
 
       {/* Roadmap Section */}
       <section id="roadmap" className="py-16 bg-black particle-bg relative">
-        <FloatingParticles density={10} showStars={true} />
+        <FloatingParticles density={10} showRadials={true} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-12">Roadmap to the Moon! 🚀</h2>
           
@@ -360,7 +373,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-16 bg-black text-center relative">
-        <FloatingParticles density={8} showStars={true} />
+        <FloatingParticles density={8} showRadials={true} />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-6">Ready for Some Real Sh*t?</h2>
           <p className="text-lg text-gray-300 mb-10">
