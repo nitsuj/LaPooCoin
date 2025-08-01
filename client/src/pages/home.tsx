@@ -94,19 +94,30 @@ export default function Home() {
     { label: "👑 Team (Locked)", percentage: "10%" }
   ];
 
-  // Floating particles animation - matching original image elements
+  // Floating particles animation - matching original image elements with enhanced coverage
   const FloatingParticles = ({ density = 12, showRadials = false }) => (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {[...Array(density)].map((_, i) => {
         // Elements from the original image: poop emojis, plus signs, and radiating lines
         const elements = showRadials 
-          ? ['💩', '+', '✦', '—', '|', '\\', '/'] 
-          : ['💩', '+', '✦'];
+          ? ['💩', '💩', '+', '✦', '—', '|', '\\', '/', '✨', '⭐'] 
+          : ['💩', '💩', '+', '✦', '✨'];
         const randomElement = elements[Math.floor(Math.random() * elements.length)];
         
         // Different styling for different elements
         const isLine = ['—', '|', '\\', '/'].includes(randomElement);
         const isPlus = randomElement === '+' || randomElement === '✦';
+        const isSpark = randomElement === '✨' || randomElement === '⭐';
+        
+        // Better distribution - ensure coverage in all quadrants
+        const quadrant = i % 4;
+        let baseX, baseY;
+        switch(quadrant) {
+          case 0: baseX = Math.random() * 50; baseY = Math.random() * 50; break; // top-left
+          case 1: baseX = 50 + Math.random() * 50; baseY = Math.random() * 50; break; // top-right
+          case 2: baseX = Math.random() * 50; baseY = 50 + Math.random() * 50; break; // bottom-left
+          default: baseX = 50 + Math.random() * 50; baseY = 50 + Math.random() * 50; break; // bottom-right
+        }
         
         return (
           <div
@@ -114,13 +125,14 @@ export default function Home() {
             className={`absolute animate-float opacity-40 hover:opacity-60 transition-opacity ${
               isLine ? 'text-amber-600 text-sm font-bold' :
               isPlus ? 'text-amber-500 text-lg font-bold' :
+              isSpark ? 'text-yellow-400 text-sm' :
               'text-xl md:text-2xl'
             }`}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 0.3}s`,
-              animationDuration: `${2 + Math.random() * 3}s`,
+              left: `${baseX}%`,
+              top: `${baseY}%`,
+              animationDelay: `${i * 0.2}s`,
+              animationDuration: `${1.5 + Math.random() * 3}s`,
               filter: 'drop-shadow(0 0 4px rgba(255, 255, 255, 0.3))',
               transform: isLine ? `rotate(${Math.random() * 360}deg)` : 'none'
             }}
@@ -159,7 +171,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center particle-bg relative pt-16">
-        <FloatingParticles density={15} showRadials={true} />
+        <FloatingParticles density={24} showRadials={true} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -220,7 +232,7 @@ export default function Home() {
 
       {/* Token Stats Section */}
       <section className="py-12 bg-black relative">
-        <FloatingParticles density={6} />
+        <FloatingParticles density={12} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {Object.entries(tokenStats).map(([key, value]) => (
@@ -235,7 +247,7 @@ export default function Home() {
 
       {/* Tokenomics Section */}
       <section id="tokenomics" className="py-16 bg-gray-900 relative">
-        <FloatingParticles density={8} />
+        <FloatingParticles density={16} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-12">Tokenomics</h2>
           
@@ -286,7 +298,7 @@ export default function Home() {
 
       {/* Roadmap Section */}
       <section id="roadmap" className="py-16 bg-black particle-bg relative">
-        <FloatingParticles density={10} showRadials={true} />
+        <FloatingParticles density={18} showRadials={true} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-12">Roadmap to the Moon! 🚀</h2>
           
@@ -323,7 +335,7 @@ export default function Home() {
 
       {/* Community Section */}
       <section id="community" className="py-16 bg-gray-900 relative">
-        <FloatingParticles density={7} />
+        <FloatingParticles density={14} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-8">Join the Sh*t Army!</h2>
           <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
@@ -373,7 +385,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-16 bg-black text-center relative">
-        <FloatingParticles density={8} showRadials={true} />
+        <FloatingParticles density={16} showRadials={true} />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-6">Ready for Some Real Sh*t?</h2>
           <p className="text-lg text-gray-300 mb-10">
