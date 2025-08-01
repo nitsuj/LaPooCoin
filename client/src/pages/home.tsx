@@ -170,7 +170,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center particle-bg relative pt-16">
+      <section id="home" className="min-h-[85vh] flex items-center justify-center particle-bg relative pt-16">
         <FloatingParticles density={24} showRadials={true} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -246,10 +246,10 @@ export default function Home() {
       </section>
 
       {/* Tokenomics Section */}
-      <section id="tokenomics" className="py-16 bg-gray-900 relative">
+      <section id="tokenomics" className="py-8 bg-gray-900 relative">
         <FloatingParticles density={16} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-12">Tokenomics</h2>
+          <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-8">Tokenomics</h2>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Tokenomics Chart */}
@@ -297,10 +297,10 @@ export default function Home() {
       </section>
 
       {/* Roadmap Section */}
-      <section id="roadmap" className="py-16 bg-black particle-bg relative">
+      <section id="roadmap" className="py-8 bg-black particle-bg relative">
         <FloatingParticles density={18} showRadials={true} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-12">Roadmap to the Moon! 🚀</h2>
+          <h2 className="text-4xl md:text-5xl font-orbitron text-center gradient-text mb-8">Roadmap to the Moon! 🚀</h2>
           
           <div className="space-y-8">
             {roadmapItems.map((item, index) => (
@@ -334,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* Community Section */}
-      <section id="community" className="py-16 bg-gray-900 relative">
+      <section id="community" className="py-8 bg-gray-900 relative">
         <FloatingParticles density={14} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-8">Join the Sh*t Show!</h2>
@@ -384,7 +384,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-black text-center relative">
+      <section className="py-8 bg-black text-center relative">
         <FloatingParticles density={16} showRadials={true} />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-6">Ready for Some Real Sh*t?</h2>
