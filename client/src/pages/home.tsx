@@ -337,7 +337,7 @@ export default function Home() {
       <section id="community" className="py-16 bg-gray-900 relative">
         <FloatingParticles density={14} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-8">Join the Sh*t Army!</h2>
+          <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-8">Join the Sh*t Show!</h2>
           <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
             Ready to be part of the most honest crypto community? No BS, no false promises - just pure, unadulterated sh*t content and memes that'll make you laugh while your portfolio goes to the moon!
           </p>
