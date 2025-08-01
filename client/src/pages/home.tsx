@@ -138,7 +138,7 @@ export default function Home() {
               <a href="#community" className="hover:text-yellow-400 transition-colors">Community</a>
             </div>
             <Button className="gradient-bg text-black font-semibold hover:scale-105 transition-transform animate-glow">
-              Buy Now
+              Get Sh*t
             </Button>
           </div>
         </div>
@@ -155,20 +155,23 @@ export default function Home() {
               <h1 className="font-orbitron text-5xl md:text-6xl lg:text-7xl gradient-text font-black">
                 LaPooPoo
               </h1>
-              <p className="text-2xl md:text-3xl font-bold text-yellow-400">
-                The Meme Coin That Makes You Laugh!
+              <p className="text-2xl md:text-3xl font-bold text-red-400 mb-2">
+                Your meme coin ain't sh*t...
+              </p>
+              <p className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4">
+                But ours IS! 💩
               </p>
               <p className="text-lg text-gray-300 max-w-xl">
-                Join the most hilarious crypto adventure! LaPooPoo is here to bring fun, community, and explosive gains to the meme coin space. Don't miss out on the next big thing! 🚀
+                Tired of boring meme coins that promise the moon but deliver garbage? LaPooPoo doesn't pretend to be anything else - we're straight-up sh*t, and we're proud of it! Join the revolution of honest meme coins.
               </p>
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" className="gradient-bg text-black font-bold text-lg hover:scale-110 transition-transform animate-bounce-slow">
-                  🚀 Buy LaPooPoo Now!
+                  💩 Get Some Sh*t Now!
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black">
-                  📊 View Chart
+                <Button size="lg" variant="outline" className="border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-black">
+                  📈 See Our Sh*tty Chart
                 </Button>
               </div>
 
@@ -309,9 +312,9 @@ export default function Home() {
       <section id="community" className="py-16 bg-gray-900 relative">
         <FloatingParticles density={7} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-8">Join the LaPooPoo Army!</h2>
+          <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-8">Join the Sh*t Army!</h2>
           <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
-            Be part of the most hilarious and supportive crypto community! Follow us on all platforms and never miss the latest updates, memes, and opportunities.
+            Ready to be part of the most honest crypto community? No BS, no false promises - just pure, unadulterated sh*t content and memes that'll make you laugh while your portfolio goes to the moon!
           </p>
 
           {/* Social Stats */}
@@ -359,17 +362,17 @@ export default function Home() {
       <section className="py-16 bg-black text-center relative">
         <FloatingParticles density={8} showStars={true} />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-6">Ready to Join the Fun?</h2>
+          <h2 className="text-4xl md:text-5xl font-orbitron gradient-text mb-6">Ready for Some Real Sh*t?</h2>
           <p className="text-lg text-gray-300 mb-10">
-            Don't miss out on the next big meme coin sensation! Join thousands of LaPooPoo holders and be part of crypto history.
+            Stop wasting time with fake-ass meme coins that overpromise and underdeliver. LaPooPoo is the only honest sh*t in crypto - and that's exactly why we're going to the moon!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button size="lg" className="gradient-bg text-black font-bold text-xl hover:scale-110 transition-transform animate-bounce-slow">
-              🚀 Buy LaPooPoo Now!
+              💩 Get Your Sh*t Now!
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black">
-              📋 How to Buy Guide
+            <Button size="lg" variant="outline" className="border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-black">
+              🔥 Join the Chaos
             </Button>
           </div>
 

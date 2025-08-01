@@ -10,6 +10,12 @@ The site features a clean rabbit mascot, floating particle animations (poop emoj
 
 Preferred communication style: Simple, everyday language.
 
+Layout preferences: Currently exploring two approaches:
+1. Professional/clean layout (current implementation) - balanced meme/professional aesthetic
+2. Edgy variant - more provocative with tagline "your meme coin ain't sh*t....but ours is!"
+
+Date: August 01, 2025 - Exploring edgier promotional approach while keeping professional version as reference.
+
 ## System Architecture
 
 ### Frontend Architecture
