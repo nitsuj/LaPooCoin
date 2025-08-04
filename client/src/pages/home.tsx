@@ -98,18 +98,16 @@ export default function Home() {
   const FloatingParticles = ({ density = 12, showRadials = false }) => (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {[...Array(density)].map((_, i) => {
-        // Elements from the original image plus crypto meme culture: poop emojis, plus signs, radiating lines, moons, and Lambos
+        // Elements from the original image: poop emojis, plus signs, and radiating lines
         const elements = showRadials 
-          ? ['💩', '💩', '+', '✦', '—', '|', '\\', '/', '✨', '⭐', '🌙', '🏎️'] 
-          : ['💩', '💩', '+', '✦', '✨', '🌙', '🏎️'];
+          ? ['💩', '💩', '+', '✦', '—', '|', '\\', '/', '✨', '⭐'] 
+          : ['💩', '💩', '+', '✦', '✨'];
         const randomElement = elements[Math.floor(Math.random() * elements.length)];
         
         // Different styling for different elements
         const isLine = ['—', '|', '\\', '/'].includes(randomElement);
         const isPlus = randomElement === '+' || randomElement === '✦';
         const isSpark = randomElement === '✨' || randomElement === '⭐';
-        const isMoon = randomElement === '🌙';
-        const isLambo = randomElement === '🏎️';
         
         // Better distribution - ensure coverage in all quadrants
         const quadrant = i % 4;
@@ -128,8 +126,6 @@ export default function Home() {
               isLine ? 'text-amber-600 text-sm font-bold' :
               isPlus ? 'text-amber-500 text-lg font-bold' :
               isSpark ? 'text-yellow-400 text-sm' :
-              isMoon ? 'text-yellow-300 text-lg' :
-              isLambo ? 'text-green-400 text-lg' :
               'text-xl md:text-2xl'
             }`}
             style={{
